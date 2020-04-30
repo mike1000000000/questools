@@ -8,8 +8,11 @@ You will first need an account here: [http://www.questrade.com]
 Node and NPM need to be installed. These tools were built using Node v12.16.1 and NPM 6.13.4.
 
 ## Install
+
+Using git (starting from an empty folder):
 ```
-$ npm install -g questools
+$ git clone https://github.com/mike1000000000/questools.git .
+$ npm install
 ```
 **Note:** If you install questools locally you can create a system link using `npm link` otherwise you will need to run `node questool.js [command]` whenever issuing a command.
 
