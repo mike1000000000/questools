@@ -1,0 +1,5 @@
+{
+    "startingUrl": "https://login.questrade.com/",
+    "positionsTableColSize": [20, 15, 15, 20, 20, 20],
+    "symbolsTableColSize": [10,12,13,13,13,13,20,13,13]
+}

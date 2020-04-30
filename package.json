@@ -1,0 +1,24 @@
+{
+  "name": "questools",
+  "version": "1.0.0",
+  "description": "A couple tools that use the Questrade API",
+  "main": "questool.js",
+  "bin": {
+    "questool": "./questool.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michel Noel",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "colors": "^1.4.0",
+    "lowdb": "^1.0.0",
+    "minimist": "^1.2.5",
+    "superagent": "^5.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
