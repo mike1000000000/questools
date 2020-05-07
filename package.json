@@ -1,6 +1,6 @@
 {
   "name": "questools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A couple tools that use the Questrade API",
   "main": "questool.js",
   "bin": {

@@ -37,7 +37,7 @@ dbConnector.loadDbVals();
 
         if (Math.round(new Date() / 1000) > currentAccessTokenExpires || token) {
             await refreshToken();
-            console.log("Requested new Access Token");
+            if(!showjson) console.log("Requested new Access Token");
             dbConnector.loadDbVals();
         }
 
@@ -61,7 +61,7 @@ dbConnector.loadDbVals();
                 console.log("No positions.");
                 return;
             }
-            showPositionsTable(positions);
+            showjson ? console.log(positions) : showPositionsTable(positions);
             break;
         case "show":
             await getSymbols(args._.slice(1).toString());
@@ -69,9 +69,8 @@ dbConnector.loadDbVals();
                 console.log("No symbols provided.");
                 return;
             }
-            showSymbolsTable(symbols);
+            showjson ? console.log(symbols) : showSymbolsTable(symbols);
             break;
-
         case "watch":
             for (const symbol of args._.slice(1)) {
                 dbConnector.addSymbolName(symbol);
@@ -91,7 +90,7 @@ dbConnector.loadDbVals();
                 console.log("No symbols provided.");
                 return;
             }
-            showSymbolsTable(symbols);
+            showjson ? console.log(symbols) : showSymbolsTable(symbols);
             break;
         default:
             console.log("No tool selected.");
